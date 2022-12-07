@@ -7,6 +7,7 @@
     <title>The band</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/552/552460.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -19,26 +20,29 @@
                     <li><a href="#tour">Tour</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             More
                             <i class="fa-solid fa-caret-down"></i>
                         </a>
                         <ul class="sub-nav">
-                            <li><a href="">Merchandise</a></li>
-                            <li><a href="">Extras</a></li>
-                            <li><a href="">Media</a></li>
+                            <li><a href="#">Merchandise</a></li>
+                            <li><a href="#">Extras</a></li>
+                            <li><a href="#">Media</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
 
             <div class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="search__icon fa-solid fa-magnifying-glass"></i>
+            </div>
+            
+            <div class="menu">
+                <i class="menu__icon fa-sharp fa-solid fa-bars"></i>
             </div>
         </header>
 
         <div id="slider">
-            <img onerror="src='./assets/img/placeholder/placeholder.jpg'" src="./assets/img/slider/slider1.jpg" alt="">
             <div class="slider__content">
                 <h3 class="slider__title">Chicago</h3>
                 <p class="slider__desc">Thank you, Chicago - A night we won't forget.</p>
@@ -57,15 +61,15 @@
     
                     <!-- Members list -->
                     <div class="row members">
-                        <div class="col col-third member">
+                        <div class="col col-third member s-col-full mt-32">
                             <p class="member__name">Name</p>
                             <img src="./assets/img/members/member1.jpg" alt="" class="member__img">
                         </div>
-                        <div class="col col-third member">
+                        <div class="col col-third member s-col-full mt-32">
                             <p class="member__name">Name</p>
                             <img src="./assets/img/members/member1.jpg" alt="" class="member__img">
                         </div>
-                        <div class="col col-third member">
+                        <div class="col col-third member s-col-full mt-32">
                             <p class="member__name">Name</p>
                             <img src="./assets/img/members/member1.jpg" alt="" class="member__img">
                         </div>
@@ -97,32 +101,32 @@
                         </ul>
     
                         <!-- Places list -->
-                        <div class="row places">
-                            <div class="col col-third place">
+                        <div class="row places mt-16">
+                            <div class="col col-third place s-col-full mt-16">
                                 <img src="./assets/img/places/1.jpg" alt="" class="place__img">
                                 <div class="place__content">
                                     <h3 class="place__content-heading">New York</h3>
                                     <p class="place__content-time">Fri 27 Nov 2016</p>
                                     <p class="place__content-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="place__content-btn js-buy-ticket-btn">Buy tickets</button>
+                                    <button class="btn s-full-width js-buy-ticket-btn">Buy tickets</button>
                                 </div>
                             </div>
-                            <div class="col col-third place">
+                            <div class="col col-third place s-col-full mt-16">
                                 <img src="./assets/img/places/2.jpg" alt="" class="place__img">
                                 <div class="place__content">
                                     <h3 class="place__content-heading">Paris</h3>
                                     <p class="place__content-time">Sat 28 Nov 2016</p>
                                     <p class="place__content-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="place__content-btn js-buy-ticket-btn">Buy tickets</button>
+                                    <button class="btn s-full-width js-buy-ticket-btn">Buy tickets</button>
                                 </div>
                             </div>
-                            <div class="col col-third place">
+                            <div class="col col-third place s-col-full mt-16">
                                 <img src="./assets/img/places/3.jpg" alt="" class="place__img">
                                 <div class="place__content">
                                     <h3 class="place__content-heading">San Francisco</h3>
                                     <p class="place__content-time">Sun 29 Nov 2016</p>
                                     <p class="place__content-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="place__content-btn js-buy-ticket-btn">Buy tickets</button>
+                                    <button class="btn s-full-width js-buy-ticket-btn">Buy tickets</button>
                                 </div>
                             </div>
                         </div>
@@ -137,28 +141,28 @@
                     <p class="section-sub-heading">Fan? Drop a note!</p>
 
                     <div class="row contact-content">
-                        <div class="col col-second contact-info">
+                        <div class="col col-second s-col-full contact-info">
                             <p>
                                 <i class="fa-solid fa-location-dot"></i>
                                 Chicago, US
                             </p>
                             <p>
                                 <i class="fa-solid fa-phone"></i>
-                                Phone: +00 151515
+                                Phone: <a href="tel:+00 151515">+00 151515</a>
                             </p>
                             <p>
                                 <i class="fa-solid fa-envelope"></i>
-                                Email: mail@mail.com
+                                Email: <a href="mailto:mail@gmail.com">mail@gmail.com</a>
                             </p>
                         </div>
-                        <div class="col col-second">
+                        <div class="col col-second s-col-full">
                             <form action="#" class="contact-form">
                                 <div class="row">
-                                    <div class="col col-second">
+                                    <div class="col col-second s-col-full">
                                         <input type="text" class="form-control" placeholder="Name" required />
                                     </div>
-                                    <div class="col col-second">
-                                        <input type="email" class="form-control" placeholder="Email" required />
+                                    <div class="col col-second s-col-full">
+                                        <input type="email" class="form-control s-mt-8" placeholder="Email" required />
                                     </div>
                                 </div>
                                 <div class="row">
@@ -168,7 +172,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <input type="submit" value="SEND" class="form-submit mt-16">
+                                <input type="submit" value="SEND" class="btn form-submit s-full-width mt-16">
                             </form>
                         </div>
                     </div>

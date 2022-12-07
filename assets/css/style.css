@@ -66,9 +66,12 @@ html {
     margin-top: 16px !important;
 }
 
-/* #main {
+.mt-32 {
+    margin-top: 32px !important;
+}
 
-} */
+#main {
+}
 
 #header {
     position: fixed;
@@ -77,6 +80,7 @@ html {
     left: 0;
     height: 46px;
     background-color: #000;
+    box-shadow: 0 0 14px rgba(255, 255, 255, 0.3);
     font-size: 1.5rem;
     z-index: 1;
 }
@@ -91,11 +95,13 @@ html {
     list-style: none;
 }
 
+#nav > ul > li:hover .sub-nav, 
 #nav > ul > li:hover .sub-nav {
     display: block;
 }
 
 #nav > ul > li > a {
+    display: block;
     text-decoration: none;
     color: #fff;
     padding: 0 24px;
@@ -106,7 +112,6 @@ html {
 }
 
 #nav > ul > li:hover > a {
-    display: block;
     background-color: #ccc;
     color: #000;
 }
@@ -138,8 +143,10 @@ html {
     transition: all 0.25s ease-in;
 }
 
-.search {
-    float: right;
+.search, .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
     line-height: 46px;
     padding: 0 24px;
     transition: all 0.25s ease-in;
@@ -150,14 +157,27 @@ html {
     background-color: #f44336;
 }
 
-.search > i {
+.search__icon {
     color: #fff;
+}
+
+.menu__icon {
+    color: #fff;
+}
+
+.menu:hover {
+    background-color: #ccc;
+}
+
+.menu:hover .menu__icon {
+    color: #000;
 }
 
 #slider {
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
+    background: url(../img/slider/slider1.jpg) top center / cover no-repeat;
 }
 
 #slider img {
@@ -184,11 +204,13 @@ html {
     margin-top: 25px;
     font-size: 1.5rem;
     font-weight: bolder;
+    text-shadow: 0 0 4px #000;
 }
 
 #content .content-section {
     width: 800px;
-    padding: 64px 0 112px;
+    max-width: 100%;
+    padding: 64px 16px 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -272,10 +294,6 @@ html {
 }
 
 /* Places list */
-.places {
-    margin-top: 32px;
-}
-
 .place__img {
     width: 100%;
     display: block;
@@ -306,7 +324,7 @@ html {
     line-height: 1.5;
 }
 
-.place__content-btn {
+.btn {
     display: inline-block;
     padding: 10px 16px;
     color: #fff;
@@ -320,7 +338,7 @@ html {
     cursor: pointer;
 }
 
-.place__content-btn:hover {
+.btn:hover {
     color: #000;
     background-color: #ccc;
 }
@@ -339,10 +357,19 @@ html {
     width: 30px;
 }
 
+.contact-info a {
+    color: #0000ee;
+}
+
+.contact-info a:hover {
+    opacity: 0.8;
+}
+
 .contact-form .form-control {
     width: 100%;
     padding: 10px 16px;
     font-size: 1.5rem;
+    border: 1px solid #ddd;
 }
 
 .form-submit {
